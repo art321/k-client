@@ -385,7 +385,7 @@ class KClickClient
         }
 
         if (empty($ip)) {
-            $ip = $_SERVER['REMOTE_ADDR'];
+            $ip = isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : '';
         }
 
         return $ip;
